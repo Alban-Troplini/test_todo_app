@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/todo_app.css" type="text/css">
+    <title>ToDo Application</title>
+</head>
+<body>
+    <div class="navbar">
+        <h2>ToDo Application</h2>
+        <h5>Crea, Visualizza, Modifica, Elimina </h5>
+    </div>
+    <section>
+       
+        <div class="form-container">
+            <form action="" method="POST" name="todo_form"> 
+                <div class="flexInput">
+                <div class="form-content">
+                    <div class="inputItems">
+                        <label for="title">Title</label>
+                        <input type="text" name="titolo" maxlength="100" required placeholder="Todo">
+                    </div>
+                    <div class="inputItems">
+                        <input type="hidden" name="stato" value="Inserito">
+                    </div>
+                    <div class="inputItems">
+                        <label for="data">Scadenza</label>
+                        <input type="date" required name="scadenza">
+                    </div>
+                </div>
+                <div>
+                    <div class="tarea">
+                        <label for="descrizione">Descrizione</label>
+                        <textarea name="descrizione" rows="5" required maxlength="500" placeholder="Descrizione"></textarea>
+                    </div>
+                    <button type="submit" class="submit" name="add"><p>Aggiungi</p></button>
+                </div>
+            </div>
+                
+            </form>
+        </div>
+    </section>
+
+    <% if(todo) { %>
+        
+    <section >
+        <div class="todoList">
+        <% for(var i = 0; i< todo.length; i++) { %>
+            <div class='<%= todo[i].stato  %>'>
+            <div class="todoText">
+                <h2><%= todo[i].titolo %></h2>
+                <p><%= todo[i].descrizione %> </p>
+            </div>
+            <div >
+                <p style="color: rgb(124, 75, 0);"><%= todo[i].scadenza %></p>
+                <h4 for="stato"><%=todo[i].stato %></h4>
+            </div>
+            
+            <div class="side_buttons">
+                <button class="update"><a href="/update/<%=todo[i].id%>" style="text-decoration: none; color: rgb(131, 131, 131);" >Update</a></button>
+                <button class="delete"><a href="/delete/<%=todo[i].id%>" style="text-decoration: none; color: rgb(255, 255, 255);" onclick="return alert('Are you sure?')">Delete</a></button>
+            </div>
+        </div>
+    <% } %>
+</div>
+    </section>
+    <% } %>
+</body>
+</html>

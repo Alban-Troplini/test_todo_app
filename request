@@ -1,0 +1,19 @@
+
+ La richiesta è di creare una semplice ToDo list atta a gestire un elenco di tasks (inserimento, modifica, eliminazione e visualizzazione).
+ 
+I task dovranno avere i seguenti attributi :
+•	Titolo -> Campo testuale max 100 caratteri
+•	Descrizione -> campo Text area max 500 caratteri
+•	Stato -> menù a tendina (Inserito, In elaborazione, completato)
+•	Data di scadenza -> Date picker
+ 
+ La ToDo list dovrà essere sviluppata interamente in HTML5, CSS3, JS / Typescript, NodeJS.
+ 
+Chiediamo inoltre di non effettuare il minify del codice in modo da poter verificare facilmente il tutto. 
+ 
+Come termine ultimo di consegna chiediamo possibilmente l’invio entro Venerdì  26/11.
+Se riuscissi poi a caricarlo su github sarebbe perfetto!!
+ 
+In caso di difficoltà in copia ci legge anche Nicolò Tavella (Supervisore del Dipartimento della Produzione) che ti risponderà per ulteriori dubbi/chiarimenti tecnici.
+ 
+Grazie per la disponibilità!
